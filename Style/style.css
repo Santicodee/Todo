@@ -18,7 +18,7 @@
     3.8px 3.8px 5.3px rgba(0, 0, 0, 0.05), 9.1px 9.1px 10px rgba(0, 0, 0, 0.054),
     19.2px 19.2px 17.9px rgba(0, 0, 0, 0.057),
     40px 40px 33.4px rgba(0, 0, 0, 0.063), 100px 100px 80px rgba(0, 0, 0, 0.07);
-  width: 30em;
+  max-width: 30em;
   height: auto;
   padding-left: 2em;
   padding-right: 2em;
@@ -70,6 +70,7 @@
   cursor: pointer;
   user-select: none;
   position: relative;
+  text-overflow: ellipsis;
 }
 .to-do-list li::before {
   content: "";
@@ -103,4 +104,21 @@ ul li span {
 ul li span:hover {
   background-color: rgb(196, 195, 195);
   transition-duration: 0.5s;
+}
+
+@media (max-width: 426px) {
+  .mini-container {
+    max-width: 20em;
+  }
+  .add {
+    right: 0em;
+  }
+}
+@media (max-width: 326px) {
+  .mini-container {
+    max-width: 18em;
+  }
+  .add {
+    right: 0em;
+  }
 }
